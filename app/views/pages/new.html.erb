@@ -1,0 +1,8 @@
+<h1>New Page</h1>
+
+<% page = @page %>
+<%= form_for page do |f| %>
+  <%= f.label :title %>
+  <%= f.text_field :title %>
+  <%= f.submit 'Create page' %>
+<% end %>
