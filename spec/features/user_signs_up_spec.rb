@@ -1,7 +1,7 @@
 require 'spec_helper'
 
 feature 'User creates an account' do
-  scenario 'with login and password credentials', :focus do
+  scenario 'with email and password credentials' do
     visit sign_up_path
     fill_in 'user_email',                 with: 'user@example.com'
     fill_in 'user_password',              with: 'secret1234'

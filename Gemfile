@@ -29,3 +29,4 @@ group :test do
 end
 
 gem 'devise', '~> 3.2.4'
+gem 'cancancan', '~> 1.8'
