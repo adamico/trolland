@@ -1,5 +1,7 @@
 <h1><%= @page.title %></h1>
 
-<% @page.sides.each do |side| %>
+<%= simple_format @page.description if @page.description %>
+
+<% [@page.side, @page.other_side].each do |side| %>
   <%= link_to "Side with #{side}", '#' %>
 <% end %>

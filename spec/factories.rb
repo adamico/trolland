@@ -10,4 +10,9 @@ FactoryGirl.define do
       role 'admin'
     end
   end
+
+  factory :page do
+    side 'foo'
+    other_side 'bar'
+  end
 end

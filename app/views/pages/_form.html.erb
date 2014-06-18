@@ -1,0 +1,9 @@
+<%= form_for page do |f| %>
+  <%= f.label :side %>
+  <%= f.text_field :side %>
+  <%= f.label :other_side %>
+  <%= f.text_field :other_side %>
+  <%= f.label :description %>
+  <%= f.text_area :description %>
+  <%= f.submit 'Create page' %>
+<% end %>

@@ -18,8 +18,8 @@ feature 'Admin creates pages' do
   end
 
   def create_page(title)
-    fill_in 'page_side1_name', with: 'foo'
-    fill_in 'page_side2_name', with: 'bar'
+    fill_in 'page_side', with: 'foo'
+    fill_in 'page_other_side', with: 'bar'
     click_on 'Create page'
   end
 end
