@@ -8,5 +8,7 @@ Rails.application.routes.draw do
 
   get :dashboard, to: 'home#dashboard', as: :dashboard
 
+  resources :pages
+
   root to: 'home#index'
 end
