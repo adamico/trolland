@@ -47,8 +47,8 @@ RSpec.configure do |config|
   # use FactoryGirl methods without prefixing FG namespace
   config.include FactoryGirl::Syntax::Methods
 
-  # run only rspec examples tagged with :focus
   config.filter_run focus: true
+  config.run_all_when_everything_filtered = true
 
   # DatabaseCleaner configuration
   config.before(:suite) do
