@@ -13,6 +13,9 @@ gem 'jbuilder', '~> 2.0'
 
 group :development do
   gem 'spring'
+  gem 'spring-commands-rspec'
+  gem 'guard-rspec', '~> 4.2.8'
+  gem 'terminal-notifier-guard'
 end
 
 group :test, :development do
