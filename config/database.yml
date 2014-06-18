@@ -81,5 +81,3 @@ test:
 production:
   <<: *default
   database: trollit_production
-  username: trollit
-  password: <%= ENV['TROLLIT_DATABASE_PASSWORD'] %>
