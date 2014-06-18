@@ -27,3 +27,5 @@ group :test do
   gem 'capybara'
   gem 'database_cleaner', '~> 1.3.0'
 end
+
+gem 'devise', '~> 3.2.4'
