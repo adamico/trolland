@@ -3,5 +3,6 @@ class HomeController < ApplicationController
   end
 
   def dashboard
+    @pages = Page.all
   end
 end
