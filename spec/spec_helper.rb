@@ -47,6 +47,8 @@ RSpec.configure do |config|
   # use FactoryGirl methods without prefixing FG namespace
   config.include FactoryGirl::Syntax::Methods
 
+  config.include AuthMacros
+
   config.filter_run focus: true
   config.run_all_when_everything_filtered = true
 

@@ -8,7 +8,7 @@ feature 'Admin creates pages' do
     sign_in admin
     visit new_page_path
     create_page('foo')
-    expect(page).to have_content 'foo'
+    expect(page).to have_content 'foo VS bar'
   end
 
   scenario 'prevent normal user to create' do
@@ -17,15 +17,9 @@ feature 'Admin creates pages' do
     expect(page).to have_content(/not authorized/i)
   end
 
-  def sign_in(factory)
-    visit login_path
-    fill_in 'user_email',    with: factory.email
-    fill_in 'user_password', with: factory.password
-    click_on 'Sign in'
-  end
-
   def create_page(title)
-    fill_in 'page_title', with: 'foo'
+    fill_in 'page_side1_name', with: 'foo'
+    fill_in 'page_side2_name', with: 'bar'
     click_on 'Create page'
   end
 end

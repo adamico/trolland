@@ -2,7 +2,9 @@
 
 <% page = @page %>
 <%= form_for page do |f| %>
-  <%= f.label :title %>
-  <%= f.text_field :title %>
+  <% [1, 2].each do |i| %>
+    <%= f.label :"side#{i}_name" %>
+    <%= f.text_field :"side#{i}_name" %>
+  <% end %>
   <%= f.submit 'Create page' %>
 <% end %>
