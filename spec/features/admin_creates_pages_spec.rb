@@ -1,32 +1,26 @@
 require 'spec_helper'
 
 feature 'Admin creates pages' do
+  given!(:user) { create(:user) }
+  given!(:admin) { create(:admin) }
+
   scenario 'can create if admin' do
-    admin_signs_in
+    sign_in admin
     visit new_page_path
     create_page('foo')
     expect(page).to have_content 'foo'
   end
 
   scenario 'prevent normal user to create' do
-    user_signs_in
+    sign_in user
     visit new_page_path
     expect(page).to have_content(/not authorized/i)
   end
 
-  def admin_signs_in
-    user = create(:admin)
+  def sign_in(factory)
     visit login_path
-    fill_in 'user_email',    with: user.email
-    fill_in 'user_password', with: user.password
-    click_on 'Sign in'
-  end
-
-  def user_signs_in
-    user = create(:user)
-    visit login_path
-    fill_in 'user_email',    with: user.email
-    fill_in 'user_password', with: user.password
+    fill_in 'user_email',    with: factory.email
+    fill_in 'user_password', with: factory.password
     click_on 'Sign in'
   end
 
