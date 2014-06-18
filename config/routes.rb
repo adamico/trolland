@@ -6,5 +6,7 @@ Rails.application.routes.draw do
     get :logout,  to: 'devise/sessions#destroy', as: :logout
   end
 
+  get :dashboard, to: 'home#dashboard', as: :dashboard
+
   root to: 'home#index'
 end
